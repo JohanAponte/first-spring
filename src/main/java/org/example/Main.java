@@ -9,11 +9,19 @@ public class Main {
         //Instantiating a Container
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
+        //Creating objects
+        //Option 1. Normal way
+        //CalculatorService calculatorService2 = new CalculatorService();
+
+        //Option 2. Getting a Spring Object
         CalculatorService calculatorService = (CalculatorService) context.getBean("calculatorService");
 
-        CalculatorService otherCalculatorService = (CalculatorService) context.getBean("calculatorService");
-
         System.out.println(calculatorService.helloWorld());
+
+
+        //Example 2:
+        BillCreator billCreator = (BillCreator) context.getBean("billCreator");
+
 
 
     }

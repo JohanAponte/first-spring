@@ -8,9 +8,11 @@
         <!-- collaborators and configuration for this bean go here -->
     </bean>
 
-    <!--    <bean id="..." class="...">-->
-    <!--        &lt;!&ndash; collaborators and configuration for this bean go here &ndash;&gt;-->
-    <!--    </bean>-->
+    <bean id="billCreator" class="org.example.BillCreator">
+        <!-- collaborators and configuration for this bean go here -->
+        <constructor-arg name="calculatorServiceAtt" ref="calculatorService"/>
+        <constructor-arg name="name" value="Facturas 300"/>
+    </bean>
 
     <!-- more bean definitions go here -->
 
